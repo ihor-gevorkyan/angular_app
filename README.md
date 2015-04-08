@@ -8,7 +8,7 @@
 Cоздать клон репозитория:
 
 ```sh
-$ git clone https://github.com/Igor-Maf/angular_app
+$ git clone https://github.com/Igor-Maf/angular_app.git
 ```
 
 Установить [node.js](https://nodejs.org/) и npm:
