@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <title>Loftblog Angular Phonecat App</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <!-- get navbar panel -->
+  <div ng-include="'components/nav.html'"></div>
+
+  <div class="container">
+    <ng-view></ng-view>
+
+    <hr>
+
+    <footer>
+      <p>&copy; 2015</p>
+    </footer>
+  </div>
+
+  <!-- require JS -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+  <!-- Angular.js core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="bower_components/angular/angular.js"></script>
+  <!--Angular.js Route-->
+  <script src="bower_components/angular-route/angular-route.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>
