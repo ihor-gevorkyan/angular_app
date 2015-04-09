@@ -19,8 +19,14 @@ phonecatApp.controller('PhoneListCtrl', ['$scope', '$http', function($scope, $ht
 
 
 // About Controller
-phonecatApp.controller('AboutCtrl', ['$scope', 'AboutService', function($scope, AboutService) {
-    $scope.services = AboutService.services(); // call return method at services
+phonecatApp.controller('AboutCtrl', ['$scope', 'TechnologiesService', 'CategoriesService', function($scope, TechnologiesService, CategoriesService) {
+    $scope.services = TechnologiesService.services(); // call return method at services
+    $scope.categories = CategoriesService.categories();
+
+    $scope.filterBy = {
+        search: '',
+        category: $scope.categories[0]
+    }
 
     // functions for displaying some skills by service
     var selectedService = null;

@@ -1,21 +1,42 @@
 <h1>Our services</h1>
 
-<ul>
-	<li ng-repeat-start="service in services">
-		<p class="label label-default">
-			{{service.category.name}}
+<div class="row">
+	<div class="form-group col-xs-3">
+		<label for="filter__names">Search by services names</label>
+		<input type="search" name="filter__names" ng-model="filterBy.search" id="filter__names" class="form-control" />
+	</div>
+
+	<div class="form-group col-xs-3">
+		<label for="filter__categories">Search by services names</label>
+		<select name="filter__categories" 
+				id="filter__categories" 
+				class="form-control"
+				ng-model="filterBy.category"
+				ng-options="c.name for c in categories">
+			
+		</select>
+	</div>
+</div>
+
+<div>
+	<ul>
+		<li ng-repeat-start="service in services | filter: {name: filterBy.search} | services: filterBy">
+			<!-- -->
+			<p class="label label-default">
+				{{service.category.name}}
+			</p>
+			<p>
+				<a href="#" ng-click="selectService(service)">
+					{{service.name}}
+				</a>
+				<span class="text-muted">
+					({{displayConcatSkills(service.skills)}})
+				</span>
+			</p>
+			
+		</li>
+		<p class="text-info" ng-repeat-end ng-show="isSerciveSelected(service)">
+			{{service.description}}
 		</p>
-		<p>
-			<a href="#" ng-click="selectService(service)">
-				{{service.name}}
-			</a>
-			<span class="text-muted">
-				({{displayConcatSkills(service.skills)}})
-			</span>
-		</p>
-		
-	</li>
-	<p class="text-info" ng-repeat-end ng-show="isSerciveSelected(service)">
-		{{service.description}}
-	</p>
-</ul>
+	</ul>
+</div>
