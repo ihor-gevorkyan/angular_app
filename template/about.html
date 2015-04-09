@@ -1,1 +1,21 @@
-<h1>About Page</h1>
+<h1>Our services</h1>
+
+<ul>
+	<li ng-repeat-start="service in services">
+		<p class="label label-default">
+			{{service.category.name}}
+		</p>
+		<p>
+			<a href="#" ng-click="selectService(service)">
+				{{service.name}}
+			</a>
+			<span class="text-muted">
+				({{displayConcatSkills(service.skills)}})
+			</span>
+		</p>
+		
+	</li>
+	<p class="text-info" ng-repeat-end ng-show="isSerciveSelected(service)">
+		{{service.description}}
+	</p>
+</ul>
