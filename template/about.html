@@ -30,14 +30,14 @@
 
 <div>
 	<ul>
-		<li ng-repeat-start="service in services | filter: {name: filterBy.search} | servicesBySkills: filterBy">
+		<li ng-repeat-start="service in services | filter: {title: filterBy.search} | servicesBySkills: filterBy">
 			<!-- -->
 			<p class="label label-default">
 				{{service.category.name}}
 			</p>
 			<p>
 				<a href="#" ng-click="selectService(service)">
-					{{service.name}}
+					{{service.title}}
 				</a>
 				<span class="text-muted">
 					({{displayConcatSkills(service.skills)}})

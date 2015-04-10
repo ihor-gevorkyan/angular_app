@@ -7,25 +7,25 @@ phonecatApp.service('TechnologiesService', function() {
   	this.services = function() {
       	return [
 		    {
-				name: 'HTML5 / CSS3 (OOCSS, BEM, SMACSS)',
+				title: 'HTML5 / CSS3 (OOCSS, BEM, SMACSS)',
 				description: 'HTML5 and CSS3 is the best specific for web pages as documents.',
 				category: {
 					name: 'frontend'
 				},
 				skills: [
 					{
-						name: 'canvas', value: 'junior', rank: 'rank'
+						name: 'canvas', value: 'junior'
 					},
 					{
-						name: 'animations', value: 'middle', rank: 'rank'
+						name: 'animations', value: 'middle'
 					},
 					{
-						name: 'other', value: 'senior', rank: 'rank'
+						name: 'other', value: 'senior'
 					}
 				]
 		    },
 		    {
-				name: 'JS / JQuery / AngularJS',
+				title: 'JS / JQuery / AngularJS',
 				description: 'JS is the best for creating dynamic pages',
 				category: {
 					name: 'frontend'
@@ -43,14 +43,14 @@ phonecatApp.service('TechnologiesService', function() {
 				]
 		    },
 		    {
-				name: 'PHP / MySQL',
+				title: 'PHP / MySQL',
 				description: 'PHP is the good serveral language',
 				category: {
 					name: 'backend'
 				},
 				skills: [
 					{
-						name: 'InnoDB', value: 'senior'
+						name: 'InnoDB', value: 'middle'
 					},
 					{
 						name: 'ORM', value: 'junior'
@@ -61,7 +61,7 @@ phonecatApp.service('TechnologiesService', function() {
 				]
 		    },
 		    {
-				name: 'Wordpress / Magento',
+				title: 'Wordpress / Magento',
 				description: 'Wordpress and Magento is the best of Content Managment Systems',
 				category: {
 					name: 'backend'
@@ -76,7 +76,7 @@ phonecatApp.service('TechnologiesService', function() {
 				]
 		    },
 		    {
-				name: 'Yii2',
+				title: 'Yii2',
 				description: 'Is a greate PHP framework',
 				category: {
 					name: 'backend'

@@ -18,7 +18,7 @@ phonecatApp
 						skill = skills[i];
 					}
 				}
-				
+
 				return skill.value;
 			}
 
@@ -29,4 +29,4 @@ phonecatApp
 				return category && skill;
 			})
 		}
-	})
+	}) // filter for about page with use category and skill level filter
