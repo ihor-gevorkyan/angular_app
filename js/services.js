@@ -14,13 +14,13 @@ phonecatApp.service('TechnologiesService', function() {
 				},
 				skills: [
 					{
-						name: 'canvas', value: 'junior'
+						name: 'canvas', value: 'junior', rank: 'rank'
 					},
 					{
-						name: 'animations', value: 'junior'
+						name: 'animations', value: 'middle', rank: 'rank'
 					},
 					{
-						name: 'other', value: 'senior'
+						name: 'other', value: 'senior', rank: 'rank'
 					}
 				]
 		    },
@@ -32,13 +32,13 @@ phonecatApp.service('TechnologiesService', function() {
 				},
 				skills: [
 					{
-						name: 'OOP', value: 'middle'
+						name: 'OOP', value: 'junior'
 					},
 					{
-						name: 'JQuery plugins', value: 'junior'
+						name: 'JQuery plugins', value: 'senior'
 					},
 					{
-						name: 'other', value: 'senior'
+						name: 'other', value: 'middle'
 					}
 				]
 		    },
@@ -68,7 +68,7 @@ phonecatApp.service('TechnologiesService', function() {
 				},
 				skills: [
 					{
-						name: 'extensions', value: 'junior'
+						name: 'extensions', value: 'middle'
 					},
 					{
 						name: 'themes', value: 'middle'
@@ -108,6 +108,27 @@ phonecatApp.service('CategoriesService', function() {
 		    {
 				name: 'backend'
 		    },
+	  	];
+	}
+})
+
+
+// Categories of technologies Service
+phonecatApp.service('SkillsService', function() {
+  	this.skills = function() {
+      	return [
+      		{
+				name: 'all'
+		    },
+		    {
+				name: 'junior'
+		    },
+		    {
+				name: 'middle'
+		    },
+		    {
+				name: 'senior'
+		    }
 	  	];
 	}
 })
