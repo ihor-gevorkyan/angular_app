@@ -13,7 +13,6 @@ phonecatApp
 			var getSkill = function(skills, level) {
 				var skill = {};
 				for (var i = 0; i < skills.length; i++) {
-					console.log(skills[i].value)
 					if (skills[i].value === level) {
 						skill = skills[i];
 					}

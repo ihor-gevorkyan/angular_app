@@ -10,6 +10,23 @@ phonecatApp.controller('NavCtrl', ['$scope', '$location', function($scope, $loca
 }]) 
 
 
+// Login Controller 
+phonecatApp.controller('LoginCtrl', ['$scope', '$location', function($scope, $location) {
+    
+    $scope.login = function() {
+        if ($scope.loginForm.$valid) {
+            if ($scope.user.email === 'admin@test.com' && $scope.user.password === 'admin') {
+                $scope.message = "You are logged in.";
+                $scope.success = true;
+            } else {
+                $scope.message = "Wrong email or password.";
+                $scope.success = false;
+            }
+        }
+    }
+}]);
+
+
 // Home Controller 
 phonecatApp.controller('PhoneListCtrl', ['$scope', '$http', function($scope, $http) {
     $http.get('phones/phones.json').success(function(data, status, headers, config) {

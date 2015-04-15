@@ -11,20 +11,24 @@ phonecatApp.config(['$routeProvider', '$locationProvider', function($routeProvid
 
 	$routeProvide
 		.when('/', {
-			templateUrl:'template/home.html',
-			controller:'PhoneListCtrl'
+			templateUrl: 'template/home.html',
+			controller: 'PhoneListCtrl'
+		})
+		.when('/login', {
+			templateUrl: 'template/login.html',
+			controller: 'LoginCtrl'
 		})
 		.when('/about', {
-			templateUrl:'template/about.html',
-			controller:'AboutCtrl'
+			templateUrl: 'template/about.html',
+			controller: 'AboutCtrl'
 		})
 		.when('/contact', {
-			templateUrl:'template/contact.html',
-			controller:'ContactCtrl'
+			templateUrl: 'template/contact.html',
+			controller: 'ContactCtrl'
 		})
 		.when('/phones/:phoneId', {
-			templateUrl:'template/phone-detail.html',
-			controller:'PhoneDetailCtrl'
+			templateUrl: 'template/phone-detail.html',
+			controller: 'PhoneDetailCtrl'
 		})
 		.otherwise({
 			redirectTo: '/'
