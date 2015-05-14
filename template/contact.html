@@ -1,1 +1,19 @@
 <h1>Contact Page</h1>
+<div class="row">
+	<input type="text" ng-model="filterQuery" placeholder="Filtering..">
+	<ul ng-init="list = [{tech: 'HTML5', experience: 3}, {tech: 'CSS3', experience: 3}, {tech: 'JS', experience: 3}]" class="col-xs-6 col-sm-12 bg-danger">
+		<li ng-repeat="item in list | filter: filterQuery">
+			<span>{{item.tech}}</span> - <span>{{item.experience}} year(s)</span>
+		</li>
+	</ul>
+	
+	<div class="col-xs-6 col-sm-12 bg-color--custom">
+		<input type="text" ng-model="bgColor" placeholder="Enter color (for example '#e1e1e1')">
+		<p>Background color is: {{bgColor}}</p>
+	</div>
+</div>
+<style>
+	.bg-color--custom {
+	  	background: {{bgColor}};
+	}
+</style>
