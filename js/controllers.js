@@ -15,13 +15,10 @@ phonecatApp.controller('LoginCtrl', ['$scope', '$location', function($scope, $lo
     
     $scope.login = function() {
         if ($scope.loginForm.$valid) {
-            if ($scope.user.email === 'admin@test.com' && $scope.user.password === 'admin') {
-                $scope.message = "You are logged in.";
-                $scope.success = true;
-            } else {
-                $scope.message = "Wrong email or password.";
-                $scope.success = false;
-            }
+            $scope.message = ($scope.user.email === 'admin@test.com' && $scope.user.password === 'admin') 
+                                ? "You are logged in."
+                                : "Wrong email or password.";
+            $scope.success = ($scope.user.email === 'admin@test.com' && $scope.user.password === 'admin');
         }
     }
 }]);
@@ -79,8 +76,17 @@ phonecatApp.controller('AboutCtrl', ['$scope', 'TechnologiesService', 'Categorie
 
 
 // Contact Controller 
-phonecatApp.controller('ContactCtrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
+phonecatApp.controller('ContactCtrl', ['$scope', 'CoursesService', function($scope, CoursesService) {
+    $scope.courses = CoursesService.getCourses();
 
+    $scope.addNewCourse = function() {
+        $scope.courses.courses.push({
+            tech: $scope.courseName,
+            passed: false
+        });
+
+        $scope.courseName = '';
+    }
 }]);
 
 

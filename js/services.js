@@ -92,7 +92,7 @@ phonecatApp.service('TechnologiesService', function() {
 		    }
 	  	];
 	}
-})
+});
 
 
 // Categories of technologies Service
@@ -110,7 +110,7 @@ phonecatApp.service('CategoriesService', function() {
 		    },
 	  	];
 	}
-})
+});
 
 
 // Categories of technologies Service
@@ -131,4 +131,38 @@ phonecatApp.service('SkillsService', function() {
 		    }
 	  	];
 	}
-})
+});
+
+
+// Courses Service
+phonecatApp.service('CoursesService', function() {
+	var courses = {
+		user: "Igor Maf",
+		courses: [
+			{
+				tech: "HTML, CSS", 
+				passed: true
+			},
+			{
+				tech: "Javascript Essential", 
+				passed: false
+			},
+			{
+				tech: "Javascript Advanced", 
+				passed: false
+			},
+			{
+				tech: "HTML5 &amp; CSS3", 
+				passed: true
+			},
+			{
+				tech: "AngularJS", 
+				passed: true
+			}
+		]
+	}
+
+	this.getCourses = function() {
+		return courses;
+	}
+});

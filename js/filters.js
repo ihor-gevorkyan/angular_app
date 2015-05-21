@@ -29,3 +29,8 @@ phonecatApp
 			})
 		}
 	}) // filter for about page with use category and skill level filter
+	.filter('status', function() {
+		return function(input) {
+			return input ? 'in proccess' : 'in pending';
+		}
+	}) // filter for Phone Details Page for attributes, which true or false, change them to icons
